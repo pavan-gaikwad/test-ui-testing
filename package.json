@@ -19,6 +19,9 @@
         "webdriverio": "^6.12.1"
     },
     "dependencies": {
-        "@codeceptjs/configure": "^0.8.0"
+        "@codeceptjs/configure": "^0.8.0",
+        "@codeceptjs/ui": "^0.4.6",
+        "codeceptjs": "^3.3.3",
+         "webdriverio": "^6.12.1"
     }
 }
