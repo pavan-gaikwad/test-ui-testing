@@ -3,7 +3,7 @@ mkdir /opt/test-automation
 cd /opt/test-automation
 npm install -g allure-commandline
 yum install -y which
-export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
+export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which java))))
 git clone $GIT_REPO_URL tests
 cd tests
 npm install
