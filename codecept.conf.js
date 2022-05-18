@@ -13,9 +13,10 @@ exports.config = {
   helpers: {
     WebDriver: {
       url: 'https://yahoo.com',
-      browser: 'chrome',
-      host: 'ae6beaa2b40d44f729304595cdb5de62-1023393259.ap-south-1.elb.amazonaws.com',
-      port: 4444,
+      browser: process.env.BROWSER,
+      // host: 'ae6beaa2b40d44f729304595cdb5de62-1023393259.ap-south-1.elb.amazonaws.com',
+      host: process.env.WD_HOST,
+      port: process.env.WD_PORT,
       path: '/wd/hub',
       desiredCapabilities: {
         chromeOptions: {
