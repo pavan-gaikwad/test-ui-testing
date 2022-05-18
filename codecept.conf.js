@@ -9,8 +9,8 @@ setCommonPlugins();
 
 const BROWSER = process.env.BROWSER
 const WD_HOST = process.env.WD_HOST
-const WD_PORT = process.env.WD_PORT
-
+const WD_PORT = parseInt(process.env.WD_PORT)
+console.log(WD_PORT)
 exports.config = {
   tests: './*_test.js',
   output: './output',
