@@ -7,16 +7,20 @@ setHeadlessWhen(process.env.HEADLESS);
 // enable all common plugins https://github.com/codeceptjs/configure#setcommonplugins
 setCommonPlugins();
 
+const BROWSER = process.env.BROWSER
+const WD_HOST = process.env.WD_HOST
+const WD_PORT = process.env.WD_PORT
+
 exports.config = {
   tests: './*_test.js',
   output: './output',
   helpers: {
     WebDriver: {
       url: 'https://yahoo.com',
-      browser: process.env.BROWSER,
+      browser: BROWSER,
       // host: 'ae6beaa2b40d44f729304595cdb5de62-1023393259.ap-south-1.elb.amazonaws.com',
-      host: process.env.WD_HOST,
-      port: process.env.WD_PORT,
+      host: WD_HOST,
+      port: WD_PORT,
       path: '/wd/hub',
       desiredCapabilities: {
         chromeOptions: {
